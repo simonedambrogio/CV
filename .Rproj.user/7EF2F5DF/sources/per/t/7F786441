@@ -3,7 +3,7 @@
     "path": "/Volumes/PROJECTS/Ended/WebSite/CV/CV.Rmd",
     "project_path": "CV.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "547431248",
     "contents": "",
     "dirty": false,
     "created": 1737291787394.0,
@@ -12,16 +12,16 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "58,316",
-        "scrollLine": "51",
-        "last_setup_crc32": "5d0cde6c8c4bffdc"
+        "cursorPosition": "72,0",
+        "scrollLine": "64",
+        "last_setup_crc32": "5d0cde6c3116c94"
     },
     "folds": "",
-    "lastKnownWriteTime": 1737307026,
+    "lastKnownWriteTime": 1737309772,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1737307026967,
+    "last_content_update": 1737309772,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -33,7 +33,7 @@ library(purrr)
 library(tibble)
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "PhD in Experimental Psychology", "2021-Today", "University of Oxford", "Oxford, UK",
+  "PhD in Experimental Psychology", "2021 - present", "University of Oxford", "Oxford, UK",
   "Visiting Graduate Scholar, Wharton Neuroscience Initiative", "2020", "University of Pennsylvania", "Philadelphia, Pennsylvania",
   "M.Sc. in Applied Cognitive Psychology (Cum Laude)", "2017-2020", "University of Padua", "Padua, Italy",
   "Erasmus + Program", "2018", "Leiden University", "Leiden, Netherlands",
@@ -55,8 +55,13 @@ tribble(
 # Conferences
 
 \begin{cventries}
-    \cventry{\normalfont{Hybrid artificial neural network modelling predicts behaviour and neural activity in a solution for Buridan's ass.}}{\textbf{Mathematics Of Neuroscience and AI}\normalfont{ (\href{https://www.youtube.com/watch?v=6LEm0jDcuxI&list=PLA59nMLAkDyiyYoISlQDDnMY4pxKmTsBC&index=51}{\faYoutube Talk}) }}{Rome, Italy}{2024}{}\vspace{-4.0mm}
-    \cventry{\normalfont{Discovery of Cognitive Strategies for Information Sampling with Deep Cognitive Modelling and Investigation of their Neural Basis}}{\textbf{Foraging and information seeking conference}\normalfont{ (\href{"https://github.com/simonedambrogio/CV/blob/main/files/Poster%20Simone%20D'Ambrogio.pdf"}{Poster})}}{Lyon, France}{2024}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Hybrid artificial neural network modelling predicts behaviour and neural activity in a solution for Buridan's ass.}}{\textbf{Mathematics Of Neuroscience and AI}\normalfont{ (\href{https://www.youtube.com/watch?v=6LEm0jDcuxI&list=PLA59nMLAkDyiyYoISlQDDnMY4pxKmTsBC&index=51}{\faYoutubePlay\, Talk}) }}{Rome, Italy}{2024}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Discovery of Cognitive Strategies for Information Sampling with Deep Cognitive Modelling and Investigation of their Neural Basis}}{\textbf{Foraging and information seeking conference}\normalfont{ (\href{https://github.com/simonedambrogio/CV/blob/main/files/post.pdf}{\faFilePdfO\, Poster})}}{Lyon, France}{2024}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Visuospatial working memory modulates the influence of
+visual attention on binary choice}}{\textbf{Interdisciplinary Symposium on Decision Neuroscience}\normalfont{ (Poster) }}{Online}{2021}{}\vspace{-4.0mm}
+    \cventry{\normalfont{The Effect of Celebrity and Visual Attention on Value-Based Decisions}}{\textbf{Society for Neuroeconomics}\normalfont{ (Poster) }}{Online}{2020}{}\vspace{-4.0mm}
+    \cventry{\normalfont{The Attentional Drift Diffusion Model with Temporal Information}}{\textbf{Junior Researcher Programme Conference}\normalfont{ (Poster) }}{Siena, Italy}{2019}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Estimation of the attentional drift diffusion model parameters via Random Utility}}{\textbf{PsicoStat Meeting}\normalfont{ ( \href{https://simone-dambrogio.shinyapps.io/presentation/}{\faGlobe\, Talk)} }}{Padova, Italy}{2019}{}\vspace{-4.0mm}
 \end{cventries}
 
 # Publications
@@ -65,7 +70,28 @@ tribble(
 bibliography_entries("packages.bib")
 ```
 
+# Technical skills
 
+```{r techtable, results='markup'}
+library(kableExtra)
+table_output <- tribble(
+   ~`Coding Languages`, ~Software, ~Other,
+  "Julia -- R -- Python -- STAN -- Node.js -- JavaScript",
+  "FSL -- SPM",
+  "Git -- Markdown -- LaTex -- Quarto -- Arduino"
+) |>
+kable(booktabs = F, align = 'c', escape = F, format = "latex", linesep = "") |>
+kable_styling(full_width = F, font_size = 10, 
+              latex_options = c("HOLD_position")) |>
+row_spec(0, bold = T, color = "#009acd") |>
+row_spec(1, bold = F, color = "#7f7f7f") |>
+column_spec(column = 1, width = '7.125cm', border_right = F, border_left = F) |>  # 50% of total (14.25cm)
+column_spec(column = 2, width = '3.5625cm', border_right = F, border_left = F) |>  # 25% of total
+column_spec(column = 3, width = '3.5625cm', border_right = F, border_left = F) |>  # 25% of total
+add_header_above(c(" " = 3), line = F)
 
+# Remove hlines
+gsub('\\\\hline', '', table_output)
+```
 
 
