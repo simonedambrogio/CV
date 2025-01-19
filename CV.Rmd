@@ -56,7 +56,7 @@ tribble(
 
 \begin{cventries}
     \cventry{\normalfont{Hybrid artificial neural network modelling predicts behaviour and neural activity in a solution for Buridan's ass.}}{\textbf{Mathematics Of Neuroscience and AI}\normalfont{ (\href{https://www.youtube.com/watch?v=6LEm0jDcuxI&list=PLA59nMLAkDyiyYoISlQDDnMY4pxKmTsBC&index=51}{\faYoutube Talk}) }}{Rome, Italy}{2024}{}\vspace{-4.0mm}
-    \cventry{\normalfont{Discovery of Cognitive Strategies for Information Sampling with Deep Cognitive Modelling and Investigation of their Neural Basis}}{\textbf{Foraging and information seeking conference}\normalfont{ (Poster)}}{Lyon, France}{2024}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Discovery of Cognitive Strategies for Information Sampling with Deep Cognitive Modelling and Investigation of their Neural Basis}}{\textbf{Foraging and information seeking conference}\normalfont{ (\href{"https://github.com/simonedambrogio/CV/blob/main/files/Poster%20Simone%20D'Ambrogio.pdf"}{Poster})}}{Lyon, France}{2024}{}\vspace{-4.0mm}
 \end{cventries}
 
 # Publications
