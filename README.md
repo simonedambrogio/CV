@@ -1,1 +1,1 @@
-<embed src="CV.pdf" type="application/pdf" width="100%" height="600px" />
+[View my CV](CV.pdf)
