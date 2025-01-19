@@ -1,0 +1,71 @@
+---
+name: Simone
+surname: D'Ambrogio
+position: "PhD"
+pronouns: he/him
+address: "Experimental Psychology, University of Oxford"
+phone: +39 392 0995325
+www: simonedambrogio.github.io
+email: "simone.dambrogio@psy.ox.ac.uk"
+github: simonedambrogio
+linkedin: simone-d-ambrogio-abb382178/?locale=en_US
+date: "`r format(Sys.time(), '%B %Y')`"
+csl: apa-cv.csl
+header-includes:
+   - \usepackage{longtable}
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+    pandoc_args: ["--lua-filter=lua/strong.lua"]
+---
+
+```{r setup, include=FALSE}
+options(tinytex.verbose = TRUE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(dplyr)
+library(purrr)
+```
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "PhD in Experimental Psychology", "2021-Today", "University of Oxford", "Oxford, UK",
+  "Visiting Graduate Scholar, Wharton Neuroscience Initiative", "2020", "University of Pennsylvania", "Philadelphia, Pennsylvania",
+  "M.Sc. in Applied Cognitive Psychology (Cum Laude)", "2017-2020", "University of Padua", "Padua, Italy",
+  "Erasmus + Program", "2018", "Leiden University", "Leiden, Netherlands",
+  "B.Sc. in Psychology (First class Honours)", "2017-2017", "University of Padua", "Padua, Italy",
+) %>%
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Research
+
+\begin{cventries}
+    \cventry{\normalfont{Studying how the brain supports adaptive behavior, combining machine learning, non-invasive brain stimulation, and high-resolution brain imaging in humans and non-human primates. }}{\href{https://www.psy.ox.ac.uk/research/decision-and-action-laboratory}{Decision and Action, University of Oxford}}{Oxford, UK}{2021 - present}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Analysis and modeling of eye-tracking and pupillometry to study the role of attention in consumer decision-making. }}{\href{https://plattlabs.rocks/}{Platt Lab, Wharton Neuroscience Initiative, UPenn}}{Philadelphia, Pennsylvania}{2020}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Analysis and modeling of decision-making.}}{\href{https://jrp.pscholars.org/}{Junior Researcher Programme}}{Cambridge, UK}{2020}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Modeling and analyzing decision-making to enhance individual and societal well-being. }}{\href{https://jdmlabpd.dpss.psy.unipd.it/jdmlab/en/}{Judgment and Decision-Making Lab, Padua University}}{Padua, Italy}{2018-2020}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Development of statistical methods for data analysis in behavioural science. }}{\href{https://psicostat.dpss.psy.unipd.it/}{PsicoStat Lab, Padua University}}{Padua, Italy}{2017-2020}{}\vspace{-4.0mm}
+\end{cventries}
+
+# Conferences
+
+\begin{cventries}
+    \cventry{\normalfont{Hybrid artificial neural network modelling predicts behaviour and neural activity in a solution for Buridan's ass.}}{\textbf{Mathematics Of Neuroscience and AI}\normalfont{ (\href{https://www.youtube.com/watch?v=6LEm0jDcuxI&list=PLA59nMLAkDyiyYoISlQDDnMY4pxKmTsBC&index=51}{\faYoutube Talk}) }}{Rome, Italy}{2024}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Discovery of Cognitive Strategies for Information Sampling with Deep Cognitive Modelling and Investigation of their Neural Basis}}{\textbf{Foraging and information seeking conference}\normalfont{ (Poster)}}{Lyon, France}{2024}{}\vspace{-4.0mm}
+\end{cventries}
+
+# Publications
+
+```{r}
+bibliography_entries("packages.bib")
+```
+
+
+
+
+
