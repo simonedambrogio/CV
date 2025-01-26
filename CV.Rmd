@@ -107,5 +107,6 @@ gsub('\\\\hline', '', table_output)
 
 ```{bash, include=FALSE}
 # Path to CV file
+echo "copying cv..."
 cp CV.pdf /Volumes/PROJECTS/Ended/WebSite/simonedambrogio.github.io/files/CV.pdf
 ```
