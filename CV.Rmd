@@ -59,7 +59,9 @@ tribble(
     \cventry{\normalfont{Discovery of Cognitive Strategies for Information Sampling with Deep Cognitive Modelling and Investigation of their Neural Basis}}{\textbf{Foraging and information seeking conference}\normalfont{ (\href{https://github.com/simonedambrogio/CV/blob/main/files/post.pdf}{\faFilePdfO\, Poster})}}{Lyon, France}{2024}{}\vspace{-4.0mm}
     \cventry{\normalfont{Visuospatial working memory modulates the influence of
 visual attention on binary choice}}{\textbf{Interdisciplinary Symposium on Decision Neuroscience}\normalfont{ (Poster) }}{Online}{2021}{}\vspace{-4.0mm}
+    \cventry{\normalfont{The effect of celebrity and visual attention on value-based becisions}}{\textbf{Wharton Neuroscience Initiative Annual Meeting}\normalfont{ (Talk) }}{Online}{2021}{}\vspace{-4.0mm}
     \cventry{\normalfont{The Effect of Celebrity and Visual Attention on Value-Based Decisions}}{\textbf{Society for Neuroeconomics}\normalfont{ (Poster) }}{Online}{2020}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Lessons from Decision Neuroscience to Inform Policy Making}}{\textbf{Italian Ministry of Economic Development - Division V}\normalfont{ (Talk) }}{Online}{2019}{}\vspace{-4.0mm}
     \cventry{\normalfont{The Attentional Drift Diffusion Model with Temporal Information}}{\textbf{Junior Researcher Programme Conference}\normalfont{ (Poster) }}{Siena, Italy}{2019}{}\vspace{-4.0mm}
     \cventry{\normalfont{Estimation of the attentional drift diffusion model parameters via Random Utility}}{\textbf{PsicoStat Meeting}\normalfont{ ( \href{https://simone-dambrogio.shinyapps.io/presentation/}{\faGlobe\, Talk)} }}{Padova, Italy}{2019}{}\vspace{-4.0mm}
 \end{cventries}
@@ -101,3 +103,9 @@ gsub('\\\\hline', '', table_output)
     \cventry{\normalfont{Funded by the University of Padua}\newline{€ 45,343.28} }{\textbf{PhD scholarship in Psychological Sciences}}{Italy}{2020}{}\vspace{-4.0mm}
     \cventry{\normalfont{Funded by the University of Padua}\newline{€ 2,800}}{\textbf{Erasmus+ School of Psychology}}{Italy}{2018}{}\vspace{-4.0mm}
 \end{cventries}
+
+
+```{bash, include=FALSE}
+# Path to CV file
+cp CV.pdf /Volumes/PROJECTS/Ended/WebSite/simonedambrogio.github.io/files/CV.pdf
+```
