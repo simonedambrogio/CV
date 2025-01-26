@@ -75,23 +75,29 @@ bibliography_entries("packages.bib")
 ```{r techtable, results='markup'}
 library(kableExtra)
 table_output <- tribble(
-   ~`Coding Languages`, ~Software, ~Other,
+   ~`Programming Languages`, ~`Software \\& Tools`, ~`Computational Skills`,
   "Julia -- R -- Python -- STAN -- Node.js -- JavaScript",
-  "FSL -- SPM",
-  "Git -- Markdown -- LaTex -- Quarto -- Arduino"
+  "FSL -- SPM -- Git -- Bash -- Markdown -- LaTeX -- Quarto -- Arduino",
+  "High-Performance Computing (HPC) systems -- parallelization with SLURM"
 ) |>
 kable(booktabs = F, align = 'c', escape = F, format = "latex", linesep = "") |>
 kable_styling(full_width = F, font_size = 10, 
               latex_options = c("HOLD_position")) |>
 row_spec(0, bold = T, color = "#009acd") |>
 row_spec(1, bold = F, color = "#7f7f7f") |>
-column_spec(column = 1, width = '7.125cm', border_right = F, border_left = F) |>  # 50% of total (14.25cm)
-column_spec(column = 2, width = '3.5625cm', border_right = F, border_left = F) |>  # 25% of total
-column_spec(column = 3, width = '3.5625cm', border_right = F, border_left = F) |>  # 25% of total
+column_spec(column = 1, width = '4.75cm', border_right = F, border_left = F) |>  # 50% of total (14.25cm)
+column_spec(column = 2, width = '4.755cm', border_right = F, border_left = F) |>  # 25% of total
+column_spec(column = 3, width = '4.75cm', border_right = F, border_left = F) |>  # 25% of total
 add_header_above(c(" " = 3), line = F)
 
 # Remove hlines
 gsub('\\\\hline', '', table_output)
 ```
 
+# Awards & Honours
 
+
+\begin{cventries}
+    \cventry{\normalfont{Funded by the University of Padua}\newline{€ 45,343.28} }{\textbf{PhD scholarship in Psychological Sciences}}{Italy}{2020}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Funded by the University of Padua}\newline{€ 2,800}}{\textbf{Erasmus+ School of Psychology}}{Italy}{2018}{}\vspace{-4.0mm}
+\end{cventries}
