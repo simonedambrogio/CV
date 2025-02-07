@@ -52,6 +52,13 @@ tribble(
     \cventry{\normalfont{Development of statistical methods for data analysis in behavioural science. }}{\href{https://psicostat.dpss.psy.unipd.it/}{PsicoStat Lab, Padua University}}{Padua, Italy}{2017-2020}{}\vspace{-4.0mm}
 \end{cventries}
 
+# Summer Schools
+
+\begin{cventries}
+    \cventry{\normalfont{Project on fMRI decoding analysis supervised by Prof. Samuel J. Gershman}}{\href{https://compneuro.neuromatch.io/tutorials/intro.html}{Computational Neuroscience, Neuromatch Academy}}{Online}{2021}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Studying how to improve real-world decision making}}{\href{https://jrp.pscholars.org/events/}{Psychology and Behavioral Sciences, JSchool}}{Siena, Italy}{2020}{}\vspace{-4.0mm}
+\end{cventries}
+
 # Conferences
 
 \begin{cventries}
@@ -70,6 +77,21 @@ visual attention on binary choice}}{\textbf{Interdisciplinary Symposium on Decis
 
 ```{r}
 bibliography_entries("packages.bib")
+```
+
+# Awards & Honours
+
+
+\begin{cventries}
+    \cventry{\normalfont{Funded by the University of Padua}\newline{€ 45,343.28} }{\textbf{PhD scholarship in Psychological Sciences}}{Italy}{2020}{}\vspace{-4.0mm}
+    \cventry{\normalfont{Funded by the University of Padua}\newline{€ 2,800}}{\textbf{Erasmus+ School of Psychology}}{Italy}{2018}{}\vspace{-4.0mm}
+\end{cventries}
+
+
+```{bash, include=FALSE}
+# Path to CV file
+echo "copying cv..."
+cp CV.pdf /Volumes/PROJECTS/Ended/WebSite/simonedambrogio.github.io/files/CV.pdf
 ```
 
 # Technical skills
@@ -96,17 +118,3 @@ add_header_above(c(" " = 3), line = F)
 gsub('\\\\hline', '', table_output)
 ```
 
-# Awards & Honours
-
-
-\begin{cventries}
-    \cventry{\normalfont{Funded by the University of Padua}\newline{€ 45,343.28} }{\textbf{PhD scholarship in Psychological Sciences}}{Italy}{2020}{}\vspace{-4.0mm}
-    \cventry{\normalfont{Funded by the University of Padua}\newline{€ 2,800}}{\textbf{Erasmus+ School of Psychology}}{Italy}{2018}{}\vspace{-4.0mm}
-\end{cventries}
-
-
-```{bash, include=FALSE}
-# Path to CV file
-echo "copying cv..."
-cp CV.pdf /Volumes/PROJECTS/Ended/WebSite/simonedambrogio.github.io/files/CV.pdf
-```
