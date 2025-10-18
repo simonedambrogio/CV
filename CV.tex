@@ -1,48 +1,60 @@
----
-name: Simone
-surname: D'Ambrogio
-position: "PhD"
-pronouns: he/him
-address: "Experimental Psychology, University of Oxford"
-phone: +39 392 0995325
-www: simonedambrogio.github.io
-email: "simone.dambrogio@psy.ox.ac.uk"
-github: simonedambrogio
-linkedin: simone-d-ambrogio-abb382178/?locale=en_US
-date: "`r format(Sys.time(), '%B %Y')`"
-csl: apa-cv.csl
-header-includes:
-   - \usepackage{longtable}
-output: 
-  vitae::awesomecv:
-    keep_tex: true
-    pandoc_args: ["--lua-filter=lua/strong.lua"]
----
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+\input{latex/configuration.tex}
+\input{latex/personal.tex}
 
-```{r setup, include=FALSE}
-options(tinytex.verbose = TRUE)
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-library(vitae)
-library(dplyr)
-library(purrr)
-```
 
-# Education
+\begin{document}
 
-```{r}
-library(tibble)
-tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "PhD in Experimental Psychology", "2021 - present", "University of Oxford", "Oxford, UK",
-  "Visiting Graduate Scholar, Wharton Neuroscience Initiative", "2020", "University of Pennsylvania", "Philadelphia, Pennsylvania",
-  "M.Sc. in Applied Cognitive Psychology (Cum Laude)", "2017-2020", "University of Padua", "Padua, Italy",
-  "Erasmus + Program", "2018", "Leiden University", "Leiden, Netherlands",
-  "B.Sc. in Psychology (First class Honours)", "2017-2017", "University of Padua", "Padua, Italy",
-) %>%
-  detailed_entries(Degree, Year, Institution, Where)
-```
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
 
-# Research
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+{October 2025}
+{Simone sD'Ambrogio~~~·~~~Curriculum Vitae}
+{\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+\section{Education}\label{education}
+
+\begin{cventries}
+    \cventry{PhD in Experimental Psychology}{University of Oxford}{Oxford, UK}{2021 - present}{}\vspace{-4.0mm}
+    \cventry{Visiting Graduate Scholar, Wharton Neuroscience Initiative}{University of Pennsylvania}{Philadelphia, Pennsylvania}{2020}{}\vspace{-4.0mm}
+    \cventry{M.Sc. in Applied Cognitive Psychology (Cum Laude)}{University of Padua}{Padua, Italy}{2017-2020}{}\vspace{-4.0mm}
+    \cventry{Erasmus + Program}{Leiden University}{Leiden, Netherlands}{2018}{}\vspace{-4.0mm}
+    \cventry{B.Sc. in Psychology (First class Honours)}{University of Padua}{Padua, Italy}{2017-2017}{}\vspace{-4.0mm}
+\end{cventries}
+
+\section{Research}\label{research}
 
 \begin{cventries}
     \cventry{\normalfont{Studying how the brain supports adaptive behavior, combining machine learning, non-invasive brain stimulation, and high-resolution brain imaging in humans and non-human primates. }}{\href{https://www.psy.ox.ac.uk/research/decision-and-action-laboratory}{Decision and Action, University of Oxford}}{Oxford, UK}{2021 - present}{}\vspace{-4.0mm}
@@ -52,14 +64,14 @@ tribble(
     \cventry{\normalfont{Development of statistical methods for data analysis in behavioural science. }}{\href{https://psicostat.dpss.psy.unipd.it/}{PsicoStat Lab, Padua University}}{Padua, Italy}{2017-2020}{}\vspace{-4.0mm}
 \end{cventries}
 
-# Summer Schools
+\section{Summer Schools}\label{summer-schools}
 
 \begin{cventries}
     \cventry{\normalfont{Project on fMRI decoding analysis supervised by Prof. Samuel J. Gershman}}{\href{https://compneuro.neuromatch.io/tutorials/intro.html}{Computational Neuroscience, Neuromatch Academy}}{Online}{2021}{}\vspace{-4.0mm}
     \cventry{\normalfont{Studying how to improve real-world decision making}}{\href{https://jrp.pscholars.org/events/}{Psychology and Behavioral Sciences, JSchool}}{Siena, Italy}{2020}{}\vspace{-4.0mm}
 \end{cventries}
 
-# Conferences
+\section{Conferences}\label{conferences}
 
 \begin{cventries}
     \cventry{\normalfont{Hybrid artificial neural network modelling predicts behaviour and neural activity in a solution for Buridan's ass.}}{\textbf{Mathematics Of Neuroscience and AI}\normalfont{ (\href{https://www.youtube.com/watch?v=6LEm0jDcuxI&list=PLA59nMLAkDyiyYoISlQDDnMY4pxKmTsBC&index=51}{\faYoutubePlay\, Talk}) }}{Rome, Italy}{2024}{}\vspace{-4.0mm}
@@ -73,48 +85,36 @@ visual attention on binary choice}}{\textbf{Interdisciplinary Symposium on Decis
     \cventry{\normalfont{Estimation of the attentional drift diffusion model parameters via Random Utility}}{\textbf{PsicoStat Meeting}\normalfont{ ( \href{https://simone-dambrogio.shinyapps.io/presentation/}{\faGlobe\, Talk)} }}{Padova, Italy}{2019}{}\vspace{-4.0mm}
 \end{cventries}
 
-# Publications
+\section{Publications}\label{publications}
 
-```{r}
-bibliography_entries("packages.bib")
-```
+% Include all entries from packages.bib without explicit citations
+\nocite{*}
+\printbibliography[heading=none]
 
-# Awards & Honours
-
+\section{Awards \& Honours}\label{awards-honours}
 
 \begin{cventries}
-    \cventry{\normalfont{Funded by the University of Padua}\newline{€ 45,343.28} }{\textbf{PhD scholarship in Psychological Sciences}}{Italy}{2020}{}\vspace{-4.0mm}
-    \cventry{\normalfont{Funded by the University of Padua}\newline{€ 2,800}}{\textbf{Erasmus+ School of Psychology}}{Italy}{2018}{}\vspace{-4.0mm}
+  \cventry{\normalfont{Funded by the University of Oxford}\newline{£ 1,044} }{\textbf{Excellence Award}}{UK}{2025}{}\vspace{-4.0mm}
+  \cventry{\normalfont{Funded by the University of Padua}\newline{€ 45,343.28} }{\textbf{PhD scholarship in Psychological Sciences}}{Italy}{2020}{}\vspace{-4.0mm}
+  \cventry{\normalfont{Funded by the University of Padua}\newline{€ 2,800}}{\textbf{Erasmus+ School of Psychology}}{Italy}{2018}{}\vspace{-4.0mm}
 \end{cventries}
 
+\section{Technical skills}\label{technical-skills}
 
-```{bash, include=FALSE}
-# Path to CV file
-echo "copying cv..."
-cp CV.pdf /Volumes/PROJECTS/Ended/WebSite/simonedambrogio.github.io/files/CV.pdf
-```
+\begin{table}[H]
+\centering\begingroup\fontsize{10}{12}\selectfont
 
-# Technical skills
+\begin{tabular}{>{\centering\arraybackslash}p{4.75cm}|>{\centering\arraybackslash}p{4.755cm}|>{\centering\arraybackslash}p{4.75cm}}
 
-```{r techtable, results='markup'}
-library(kableExtra)
-table_output <- tribble(
-   ~`Programming Languages`, ~`Software \\& Tools`, ~`Computational Skills`,
-  "Julia -- R -- Python -- STAN -- Node.js -- JavaScript",
-  "FSL -- SPM -- Git -- Bash -- Markdown -- LaTeX -- Quarto -- Arduino",
-  "High-Performance Computing (HPC) systems -- parallelization with SLURM"
-) |>
-kable(booktabs = F, align = 'c', escape = F, format = "latex", linesep = "") |>
-kable_styling(full_width = F, font_size = 10, 
-              latex_options = c("HOLD_position")) |>
-row_spec(0, bold = T, color = "#009acd") |>
-row_spec(1, bold = F, color = "#7f7f7f") |>
-column_spec(column = 1, width = '4.75cm', border_right = F, border_left = F) |>  # 50% of total (14.25cm)
-column_spec(column = 2, width = '4.755cm', border_right = F, border_left = F) |>  # 25% of total
-column_spec(column = 3, width = '4.75cm', border_right = F, border_left = F) |>  # 25% of total
-add_header_above(c(" " = 3), line = F)
+\multicolumn{3}{c}{ } \\
+\textcolor[HTML]{009acd}{\textbf{Programming Languages}} & \textcolor[HTML]{009acd}{\textbf{Software \& Tools}} & \textcolor[HTML]{009acd}{\textbf{Computational Skills}}\\
 
-# Remove hlines
-gsub('\\\\hline', '', table_output)
-```
+\textcolor[HTML]{7f7f7f}{Python -- Julia -- R -- STAN -- Node.js -- JavaScript} & \textcolor[HTML]{7f7f7f}{FSL -- SPM -- Git -- Bash -- Markdown -- LaTeX -- Quarto -- Arduino} & \textcolor[HTML]{7f7f7f}{High-Performance Computing (HPC) systems -- parallelization with SLURM}\\
 
+\end{tabular}
+\endgroup{}
+\end{table}
+
+
+
+\end{document}

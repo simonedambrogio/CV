@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# build the article
+latexmk -xelatex -f CV.tex
+
+# clean up the auxilary files
+rm CV.aux CV.log CV.out CV.fls CV.fdb_latexmk CV.xdv CV.bbl CV.blg CV.bcf CV.run.xml
+
+# WEBSITE_DIR=/Volumes/PROJECTS/archived/WebSite/simonedambrogio.github.io
+# cp CV.pdf $WEBSITE_DIR/files/CV.pdf

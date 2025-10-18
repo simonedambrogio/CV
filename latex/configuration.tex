@@ -1,0 +1,63 @@
+\fontdir[fonts/] % Specify the location of the included fonts
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true} % Set false if you don't want to highlight section with awesome color
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\def\endfirstpage{\newpage}
+
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+% Bibliography setup with biblatex
+\usepackage[style=apa, backend=biber, sorting=ydnt]{biblatex}
+\addbibresource{packages.bib}
+\DeclareFieldFormat[article,online]{title}{\emph{#1}}
+\renewcommand*{\bibfont}{\normalfont\small}
+
+% Make D'Ambrogio, S. bold in bibliography (works with both ' and ')
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifboolexpr{
+    ( test {\ifdefstring{\namepartfamily}{D'Ambrogio}}
+      or test {\ifdefstring{\namepartfamily}{D'Ambrogio}} )
+    and
+    ( test {\ifdefstring{\namepartgiven}{Simone}}
+      or test {\ifdefstring{\namepartgiveni}{S}} )
+  }
+    {\textbf{#1}}
+    {#1}}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifboolexpr{
+    ( test {\ifdefstring{\namepartfamily}{D'Ambrogio}}
+      or test {\ifdefstring{\namepartfamily}{D'Ambrogio}} )
+    and
+    ( test {\ifdefstring{\namepartgiven}{Simone}}
+      or test {\ifdefstring{\namepartgiveni}{S}} )
+  }
+    {\textbf{#1}}
+    {#1}}
+
+%------------------------------------------------------------------------------
+
+
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
